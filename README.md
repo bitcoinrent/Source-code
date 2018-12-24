@@ -10,7 +10,7 @@ out collectively by the network. BitcoinRent Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the BitcoinRent Core software, see https://bitcoinrent.org/en/download, or read the
+the BitcoinRent Core software, see https://bitcoinrentofficial.org, or read the
 [original whitepaper](https://bitcoinrentcore.org/bitcoinrent.pdf).
 
 License
