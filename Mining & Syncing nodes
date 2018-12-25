@@ -1,0 +1,22 @@
+Once you have your bitcoinrent wallet set up Click settings menu then click options. The options window will appear on bottom corner
+click open configuration file.
+
+
+Add info below to configuration file exit save and close restart Bitcoinrent.
+
+
+addnode=165.227.54.67
+addnode=167.99.189.143
+addnode=45.76.141.52
+addnode=167.179.65.184
+addnode=45.76.246.216
+gen=1
+
+
+If you are only looking to sync nodes add these nodes to bitcoinrent configuration file bitcoinrent.conf
+
+addnode=165.227.54.67
+addnode=167.99.189.143
+addnode=45.76.141.52
+addnode=167.179.65.184
+addnode=45.76.246.216
