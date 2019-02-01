@@ -1,0 +1,19 @@
+Once your wallet is installed. you must sync with network and if you want to mine you need to add a couple lines of info.
+
+First let's sync the wallet.
+
+
+open your wallet software. 
+1.click settings then options on menu bar
+2.options tab appears click the button on bottom that says "open Configuration File"
+3.Notepad or a editor will appear
+4.Add liines below or copy paste exactly as shown:
+
+addnode=45.76.141.52
+addnode=167.179.65.184
+addnode=165.227.54.67
+addnode=167.99.189.143
+gen=1
+server=1
+
+ok Now save and close that close bitcoinrent and restart everything should sync and start mining enjoy!
