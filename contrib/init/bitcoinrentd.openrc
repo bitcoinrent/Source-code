@@ -1,0 +1,92 @@
+#!/sbin/openrc-run
+
+# backward compatibility for existing gentoo layout 
+#
+if [ -d "/var/lib/bitcoinrent/.bitcoinrent" ]; then
+	BITCOINRENTD_DEFAULT_DATADIR="/var/lib/bitcoinrent/.bitcoinrent"
+else
+	BITCOINRENTD_DEFAULT_DATADIR="/var/lib/bitcoinrentd"
+fi
+
+BITCOINRENTD_CONFIGFILE=${BITCOINRENTD_CONFIGFILE:-/etc/bitcoinrent/bitcoinrent.conf}
+BITCOINRENTD_PIDDIR=${BITCOINRENTD_PIDDIR:-/var/run/bitcoinrentd}
+BITCOINRENTD_PIDFILE=${BITCOINRENTD_PIDFILE:-${BITCOINRENTD_PIDDIR}/bitcoinrentd.pid}
+BITCOINRENTD_DATADIR=${BITCOINRENTD_DATADIR:-${BITCOINRENTD_DEFAULT_DATADIR}}
+BITCOINRENTD_USER=${BITCOINRENTD_USER:-${BITCOINRENT_USER:-bitcoinrent}}
+BITCOINRENTD_GROUP=${BITCOINRENTD_GROUP:-bitcoinrent}
+BITCOINRENTD_BIN=${BITCOINRENTD_BIN:-/usr/bin/bitcoinrentd}
+BITCOINRENTD_NICE=${BITCOINRENTD_NICE:-${NICELEVEL:-0}}
+BITCOINRENTD_OPTS="${BITCOINRENTD_OPTS:-${BITCOINRENT_OPTS}}"
+
+name="BitcoinRent Core Daemon"
+description="BitcoinRent cryptocurrency P2P network daemon"
+
+command="/usr/bin/bitcoinrentd"
+command_args="-pid=\"${BITCOINRENTD_PIDFILE}\" \
+		-conf=\"${BITCOINRENTD_CONFIGFILE}\" \
+		-datadir=\"${BITCOINRENTD_DATADIR}\" \
+		-daemon \
+		${BITCOINRENTD_OPTS}"
+
+required_files="${BITCOINRENTD_CONFIGFILE}"
+start_stop_daemon_args="-u ${BITCOINRENTD_USER} \
+			-N ${BITCOINRENTD_NICE} -w 2000"
+pidfile="${BITCOINRENTD_PIDFILE}"
+
+# The retry schedule to use when stopping the daemon. Could be either
+# a timeout in seconds or multiple signal/timeout pairs (like
+# "SIGKILL/180 SIGTERM/300")
+retry="${BITCOINRENTD_SIGTERM_TIMEOUT}"
+
+depend() {
+	need localmount net
+}
+
+# verify
+# 1) that the datadir exists and is writable (or create it)
+# 2) that a directory for the pid exists and is writable
+# 3) ownership and permissions on the config file
+start_pre() {
+	checkpath \
+	-d \
+	--mode 0750 \
+	--owner "${BITCOINRENTD_USER}:${BITCOINRENTD_GROUP}" \
+	"${BITCOINRENTD_DATADIR}"
+
+	checkpath \
+	-d \
+	--mode 0755 \
+	--owner "${BITCOINRENTD_USER}:${BITCOINRENTD_GROUP}" \
+	"${BITCOINRENTD_PIDDIR}"
+
+	checkpath -f \
+	-o ${BITCOINRENTD_USER}:${BITCOINRENTD_GROUP} \
+	-m 0660 \
+	${BITCOINRENTD_CONFIGFILE}
+
+	checkconfig || return 1
+}
+
+checkconfig()
+{
+	if ! grep -qs '^rpcpassword=' "${BITCOINRENTD_CONFIGFILE}" ; then
+		eerror ""
+		eerror "ERROR: You must set a secure rpcpassword to run bitcoinrentd."
+		eerror "The setting must appear in ${BITCOINRENTD_CONFIGFILE}"
+		eerror ""
+		eerror "This password is security critical to securing wallets "
+		eerror "and must not be the same as the rpcuser setting."
+		eerror "You can generate a suitable random password using the following "
+		eerror "command from the shell:"
+		eerror ""
+		eerror "bash -c 'tr -dc a-zA-Z0-9 < /dev/urandom | head -c32 && echo'"
+		eerror ""
+		eerror "It is recommended that you also set alertnotify so you are "
+		eerror "notified of problems:"
+		eerror ""
+		eerror "ie: alertnotify=echo %%s | mail -s \"BitcoinRent Alert\"" \
+			"admin@foo.com"
+		eerror ""
+		return 1
+	fi
+}
