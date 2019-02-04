@@ -144,7 +144,7 @@ public:
         // consensus.defaultAssumeValid = uint256S("0x0000000000000000002e63058c023a9a1de233554f28c7b21380b6c9003f36a8"); //534292
 
 
-        consensus.laxRulesetTimeout = 1547424000; // January 14, 2019
+        consensus.laxRulesetTimeout = 1747424000; // original January 14, 2019 1547424000
 
 
         /**
