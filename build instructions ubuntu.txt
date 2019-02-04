@@ -53,5 +53,5 @@ make -s -j5
 # If all went well you will be able to access the binary at below location
 cd ~/source-code/
 ./src/bitcoinrentd
-./src/bitcoinrent-qt
+./src/qt/bitcoinrent-qt
 ./src/bitcoinrent-cli
