@@ -170,13 +170,13 @@ public:
         // This is fine at runtime as we'll fall back to using them as a oneshot if they don't support the
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
-        vSeeds.emplace_back("seed.bitcoinrent.sipa.be");          // Pieter Wuille, only supports x1, x5, x9, and xd
+        vSeeds.emplace_back("45.76.141.52");                      // node 3 london
         vSeeds.emplace_back("dnsseed.bluematt.me");               // Matt Corallo, only supports x9
-        vSeeds.emplace_back("dnsseed.bitcoinrent.dashjr.org");    // Luke Dashjr
-        vSeeds.emplace_back("seed.bitcoinrentstats.com");         // Christian Decker, supports x1 - xf
-        vSeeds.emplace_back("seed.bitcoinrent.jonasschnelli.ch"); // Jonas Schnelli, only supports x1, x5, x9, and xd
+        vSeeds.emplace_back("167.179.65.184");                   // node 4 tokyo
+        vSeeds.emplace_back("167.99.189.143");                   // 
+        vSeeds.emplace_back("165.227.54.67");                    // 
         vSeeds.emplace_back("seed.btc.petertodd.org");            // Peter Todd, only supports x1, x5, x9, and xd
-        vSeeds.emplace_back("seed.bitcoinrent.sprovoost.nl");     // Sjors Provoost
+       
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 35);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 38);
