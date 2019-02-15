@@ -40,6 +40,11 @@ Building Instructions
 Building instructions for linux win64 win32 and mac/osx can be located in the doc directory of this tree.
 https://github.com/bitcoinrent/Source-code/tree/master/doc
 
+Reach out to us
+---------------
 
+Discord bitcoinrent https://discord.gg/wb2bVJ
+Twitter @bitcoin_rent
+E-mail Bitcoinrentofficial@gmail.com
 
 
