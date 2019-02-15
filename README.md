@@ -44,7 +44,9 @@ Reach out to us
 ---------------
 
 Discord bitcoinrent https://discord.gg/wb2bVJ
+
 Twitter @bitcoin_rent
+
 E-mail Bitcoinrentofficial@gmail.com
 
 
