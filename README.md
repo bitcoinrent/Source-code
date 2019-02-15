@@ -31,8 +31,8 @@ Development Process
 -------------------
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. (https://github.com/bitcoinrent/bitcoinrent/tags) are created
-regularly to indicate new official, stable release versions of BitcoinRent Core.
+completely stable. (http://www.bitcoinrentofficial.org/download/) for stable
+release versions of BitcoinRent Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
 
