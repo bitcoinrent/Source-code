@@ -3,6 +3,10 @@
 What is BitcoinRent?
 ----------------
 
+[![Build Status](https://travis-ci.org/bitcoin/bitcoin.svg?branch=master)](https://travis-ci.org/bitcoin/bitcoin)
+
+
+
 BitcoinRent is an experimental digital currency that enables instant payments to
  anyone, anywhere in the world. BitcoinRent uses peer-to-peer technology to operate
  with no central authority: managing transactions and issuing money are carried
