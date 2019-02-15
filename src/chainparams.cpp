@@ -171,11 +171,10 @@ public:
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
         vSeeds.emplace_back("45.76.141.52");                      // node 3 london
-                                                                 // Matt Corallo, only supports x9vSeeds.emplace_back("dnsseed.bluematt.me");
         vSeeds.emplace_back("167.179.65.184");                   // node 4 tokyo
         vSeeds.emplace_back("167.99.189.143");                   // 
         vSeeds.emplace_back("165.227.54.67");                    // 
-                                                                 // Peter Todd, only supports x1, x5, x9, and xd vSeeds.emplace_back("seed.btc.petertodd.org"); 
+                                                                
        
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 35);
