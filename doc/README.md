@@ -63,9 +63,7 @@ The BitcoinRent repo's [root README](/README.md) contains relevant information o
 - [Benchmarking](benchmarking.md)
 
 ### Resources
-* Discuss on the [BitcoinRentTalk](https://bitcoinrenttalk.org/) forums, in the [Development & Technical Discussion board](https://bitcoinrenttalk.org/index.php?board=6.0).
-* Discuss project-specific development on #bitcoinrent-core-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=bitcoinrent-core-dev).
-* Discuss general BitcoinRent development on #bitcoinrent-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=bitcoinrent-dev).
+* Discuss
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
