@@ -30,16 +30,15 @@ information or see https://opensource.org/licenses/MIT.
 Development Process
 -------------------
 
-The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. (http://www.bitcoinrentofficial.org/download/) for stable
-release versions of BitcoinRent Core.
+The `master` branch is regularly built and tested. You can also vist 
+(http://www.bitcoinrentofficial.org/download/) for stable release versions of BitcoinRent Core.
 
 
 Building Instructions
 ---------------------
 
 Building instructions for linux win64 win32 and mac/osx can be located in the doc directory of this tree.
-https://github.com/bitcoinrent/Source-code/doc/
+/Source-code/doc/
 
 
 
