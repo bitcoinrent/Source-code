@@ -28,10 +28,8 @@ Drag BitcoinRent Core to your applications folder, and then run BitcoinRent Core
 
 ### Need Help?
 
-* See the documentation at the [BitcoinRent Wiki](https://en.bitcoinrent.it/wiki/Main_Page)
-for help and more information.
-* Ask for help on [#bitcoinrent](http://webchat.freenode.net?channels=bitcoinrent) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=bitcoinrent).
-* Ask for help on the [BitcoinRentTalk](https://bitcoinrenttalk.org/) forums, in the [Technical Support board](https://bitcoinrenttalk.org/index.php?board=4.0).
+* Ask for help on discord https://discord.gg/wb2bVJ
+
 
 Building
 ---------------------
