@@ -38,7 +38,7 @@ Building Instructions
 ---------------------
 
 Building instructions for linux win64 win32 and mac/osx can be located in the doc directory of this tree.
-/Source-code/doc/
+https://github.com/bitcoinrent/Source-code/tree/master/doc
 
 
 
