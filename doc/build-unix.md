@@ -74,11 +74,11 @@ Build requirements:
 
 BerkeleyDB is required for the wallet.
 
-**For Ubuntu only:** db4.8 packages are available [here](https://launchpad.net/~bitcoinrent/+archive/bitcoinrent).
+**For Ubuntu only:** db4.8 packages are available [here](https://launchpad.net/~bitcoin/+archive/bitcoin).
 You can add the repository and install using the following commands:
 
     sudo apt-get install software-properties-common
-    sudo add-apt-repository ppa:bitcoinrent/bitcoinrent
+    sudo add-apt-repository ppa:bitcoinrent/Source-code
     sudo apt-get update
     sudo apt-get install libdb4.8-dev libdb4.8++-dev
 
@@ -249,7 +249,7 @@ Setup and Build Example: Arch Linux
 This example lists the steps necessary to setup and build a command line only, non-wallet distribution of the latest changes on Arch Linux:
 
     pacman -S git base-devel boost libevent python
-    git clone https://github.com/bitcoinrent/bitcoinrent.git
+    git clone https://github.com/bitcoinrent/Source-code.git
     cd bitcoinrent/
     ./autogen.sh
     ./configure --disable-wallet --without-gui --without-miniupnpc
